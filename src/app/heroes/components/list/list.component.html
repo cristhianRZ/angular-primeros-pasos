@@ -1,0 +1,22 @@
+<h5>Listado de Productos</h5>
+
+<div *ngIf="deleteProd;  else nothingWasDeleted">
+<h5>Producto borrado :  <small class="text-danger">{{deleteProd}}</small></h5>
+</div>
+
+<ng-template #nothingWasDeleted>
+<h5 >No ha borrado nada</h5>
+</ng-template>
+
+<button
+*ngIf="prodNames.length> 0"
+(click)="removeLasProd()"
+class="btn btn-outline-danger">
+Borrar ultimo Producto
+</button>
+
+
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of prodNames"
+   class="list-group-item"> {{name}}</li>
+</ul>

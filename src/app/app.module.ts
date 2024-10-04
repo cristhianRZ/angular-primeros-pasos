@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroModele } from './heroes/components/hero.module';
 import { ListModule } from './heroes/components/list.module';
+import { DbzModule } from './dbz/dbz.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ListModule } from './heroes/components/list.module';
     AppRoutingModule,
     CounterModule,
     ListModule,
-    HeroModele
+    HeroModele,
+    DbzModule
   ],
   providers: [],
   bootstrap: [AppComponent]
